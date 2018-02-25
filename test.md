@@ -1,10 +1,10 @@
 ## [Problem Name](https:link/to/the/problem)
 ##### Tags: 	
-> Array, HashTable  
+	 Array, HashTable  
 ##### __Input__: 
->int target, an array
+	int target, an array
 ##### __Output__: fv
->return the _index_ of two numbers that can be added up to target;
+	return the _index_ of two numbers that can be added up to target;
 ##### __Constrain__: 
 	 each number can be used __ONLY once__
 ##### __Basic idea:__
