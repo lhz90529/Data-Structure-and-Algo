@@ -10,3 +10,9 @@ Each number can be used __ONLY once__
 #### Basic idea:
 * Fill the Hash Table with __<key, value>__ pair ---> __<what the value is, where it is>__
 * For each number **‘x’** check if its counterpart **'target - x'** is existed in the table;
+### Pseudo code:
+1. Create an empty Hash Table ---> spatial cost: O(N)
+2. Fill up the hashtable:
+  * For each number x from input array ---> Temporal cost: O(N)
+      table[x] = index of x; ---> Hash Table insertion: O(1)
+    End For  
