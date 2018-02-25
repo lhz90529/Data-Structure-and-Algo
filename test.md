@@ -1,6 +1,6 @@
 ## [Problem Name](https:link/to/the/problem)
 ### Tags
-Array, HashTable.  
+Array, **HashTable**.  
 #### Input: 
 int target, an array
 #### Output: 
