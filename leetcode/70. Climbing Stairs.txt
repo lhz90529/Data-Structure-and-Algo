@@ -1,0 +1,32 @@
+70. Climbing Stairs
+Tag: Dynamic Programming
+Input: Given a positive integer that represents the top level of stairs
+Output: How many DISTINCT ways to reach the top?
+Constrains:
+	Each time you could either move 1 step or 2 steps upward
+
+Basic idea:
+	Dynamic Programming (Bottom-up Approach)
+	Analysis:
+	Problem: # of DISTINCT ways to reach level "i"
+	Subproblem:
+		1: You can reach level "i" by move 1 step upward from level "i - 1";
+		
+		2: You can reach level "i" by moving 2 steps upward from level "i - 2"
+	Related Subproblems:
+	Problem = Subproblem1 + Subproblem2
+
+Pseudo code:
+Initialize a DP table;
+DP[0] = 1 ---> You are already at level 0;
+DP[1] = 1 ---> Obiviously, there is only one way to reach level 1
+				i.e. move 1 step upward from level 0
+DP[i] for any i > 2
+	DP[i] = DP[i - 1] + DP[i - 2] ---> according to how we related subproblems
+	Generally, this is actually kind of the Fibonacci sequence.... 
+Temporal cost: O(N)
+Spatial cost: O(N)
+-------------------------------------------------------------------
+Follow up:
+Acutally, we can do better ---> reduce spatial cost to O(1)
+Because each time you compute DP[i] for any i > 2, the only thing you need is DP[i - 1] and DP[i - 2], anything else is unnecessary

@@ -1,0 +1,41 @@
+Tag: Linked List, Math
+Input:  head1 and head2: the head of two non-empty lists;
+Output: the head of a linked list such that the output list represents the addition of the number represented by list1 and the number represented by list2;
+
+eg:
+	2->4->3
++	5->6->4
+------------    
+	7->0->8	
+	
+explanation:
+	2 + 5 = 7;
+	4 + 6 = 10; ---> give carry = 1 to the next level;
+	3 + 4 + 1 = 8;
+	  
+Basic idea:
+	Traverse the 2 lists and add... Important parameter: carry
+
+Pseudo code:
+1: Parameters initialization;
+		l1 point to the head of list1;
+		l2 point to the head of list2;
+		ret: a newly creat list with dummy variable 0; 
+			like "ret: 0->NULL"
+		tail: always point to the last Link node of list "ret";
+		carry = 0;
+2: As long as we haven't traverse through the 2 list or the carry is non-zero
+		val1 = l1->val; special case: val1 = 0 if the l1 = NULL; 
+		val2 = l2->val; special case: val2 = 0 if the l2 = NULL; 
+		tail->next = a new link node with value  "(val1 + val2 + carry) % 10"
+		
+		before move to next iteration of the loop, update info:
+		carry will be used for next level is "(val1 + val2 + carry) % 10"
+		current = current->next;
+		move l1 if it's not NULL; move l2 if it's not NULL;
+3:
+	return ret->next; since the first link node is dummy node '0';
+
+Overall Temporal Complexity: O(N), where N is the toal number of node from list1 and list2, since we traverse through the 2 list;
+Spatial cost: O(1)  
+	

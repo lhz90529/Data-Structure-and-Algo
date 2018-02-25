@@ -1,0 +1,27 @@
+39. Combination Sum
+Tag: Array, Backtracking
+Input: an array of number that contains NO DUPLICATE & a target number
+Output: find all unique combinations in array where the candidate numbers sums to target
+Constrains:
+	1: Each number can be used multiple times in one solution;
+	2: All numbers (including target) will be positive integers.
+	3: The solution set must not contain duplicate combinations.
+
+Basic idea:
+	key concept: recursion + backtracking;
+
+General structure:
+recursion:
+	base case: target == 0 ---> we find the desired combination, push it into final return;
+	recursive cases:
+		decision: chose a number from pool and insert it into solution set
+		choices of decision: each number from the pool with constrain
+			Optimize our choice: we only chose the number that is no larger than target, otherwise we are doing useless work;
+		Making decision: push the number into solution set;
+		Explore the path followed by the decision we just made by making recursive call
+			BUT!!! ---> with different parameters:
+				1: target = target - decision we just made
+				2: tell the next recursive call such that the next recursive call has restricted access to the pool such that duplicate combination will be avoided; ***very important && common mistakes*** 
+		Backtracking(undo the decision we made): pop out the number from the solution set;
+
+Temporal: maybe O(2^N) but this is maybe the best we can do

@@ -1,0 +1,50 @@
+46. Permutations
+Tags: Backtracking
+Input: a collection of DISTINCT numbers i.e. an array
+Output: all permutations
+
+e.g.
+[1,2,3] have the following permutations:
+[
+  [1,2,3],
+  [1,3,2],
+  [2,1,3],
+  [2,3,1],
+  [3,1,2],
+  [3,2,1]
+]
+
+Basic idea:
+	recursion + backtracking
+	recursion will do a little bit of job each time when it is called;
+
+Pseudo code:
+Important variable declaration and explanation:
+	chosen: a container to record all decisions we have made sofar
+Base case:
+	If pool is empty, ---> nothing we can chose from pool
+		push "chosen" into our final solution set
+Recursive case:
+	Decison: chose a number
+	Choice: each number in pool
+	Making decision: 
+		1: decalre a temporary variable "temp" to store the choice we made
+			such that it will be used in "Backtracking";
+		2: push the choice into "chosen" to record our decision
+		3: pop the choice from pool
+	Explore: recursive call
+	Backtracking: 
+		1: pop out the choice from "chosen"
+		2: push the choice we made back into pool at CORRECT position;
+
+Temporal Complexity: O(N!)
+Think about it in the following way:
+The first position: we have N choices
+The second position: we have N - 1 choices
+.
+.
+.
+The N-th position: we have only 1 choice;
+Thus, the number of permutations for a collection of N DISTINCT numbers is N! ---> N Factorail;
+		
+	

@@ -1,0 +1,11 @@
+72. Edit Distance
+Tag: String, Dynamic Programming
+Input: given two words word1 and word2
+Output: the minimum number of steps required to convert word1 to word2
+Constrains:
+Operations allowed on word:
+	1: Insert a character
+	2: Delete a character
+	3: Replace a character
+
+Basic idea:

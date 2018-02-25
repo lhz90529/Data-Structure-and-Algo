@@ -1,0 +1,44 @@
+40. Combination Sum II
+Tag: Array, Backtracking
+Input: int target, An array
+Output: all unique combinations in input array where the candidate numbers sums to target.
+Constrians: 
+	Each number in C may only be used once in the combination.
+	All numbers (including target) will be positive integers.
+	The solution set must not contain duplicate combinations.
+
+Basic idea:
+	sort the input array such that:
+		duplicate element will be clustered
+	recursion + backtracking
+
+Pseudo code:
+1: sort the input array
+2: recursion + backtracking
+Important variable declaration and explanation:
+	chosen: a container to record all decisions we have made sofar
+	start: indicate where you can start exploring element from the pool for each recursive call. Initialization: start = 0 since the first recursive call has access to all element from the pool;
+
+Base case: 
+	if target == 0, i.e. no more work need to do
+				push "chosen" into final solution set  
+Recursive cases:
+	For each element from the valid range of the pool, 
+	i.e. from "start" to the last element of the pool
+		Important check: 
+		if(i > start && pool[i] == pool[i - 1])
+			skip this round;
+		explanation:
+			if we are accessing a non-first element, and if the value of current accessing element is as same as that of the previous one, we skip this round to avoid duplicat combination, that's the main reason why we sort the pool before doing recursion
+		Optimize our choice:
+			chose element that is no larger than target
+			Making decision: push the choice into "chosen";
+			Explore: making recursive call
+				with differetn parameters:
+					target = target - choice;//less job
+					start = start + 1;//restrict access
+			Backtracking: pop out choice from "chosen"
+				i.e. undo the decision we made
+	End For
+
+		

@@ -1,0 +1,62 @@
+51. N-Queens
+Tag: Backtracking
+Input: an non-negative integer n
+Output: all distinct solutions to the n-queens puzzle.
+
+What's N-Queens problem:
+Placing N Queens on an N-by-N board such that no two queens
+	1: on same row
+	2: on same column
+	3: on same diagnoal line, either 45 degree or 135 degree
+	45 degree: x + 1, y - 1 direction
+	135 degree: x - 1, y - 1 direction
+	
+	---------------------->> col
+	|
+	|	----------------
+	|	| x-1| x-1| x-1|
+	|	| y-1|	y |	y+1| 
+	|	----------------
+	|	| x  |	x |	x  |
+	|	| y-1|	y |	y+1| 
+	|	----------------
+	|	| x+1| x+1| x+1|
+	|	| y-1|  y |	y+1| 
+	|	----------------		
+    ↓
+   row
+	
+Bacis idea:
+	Recursion + Backtracking
+	Recusion: do a little bit of work each time when it is called;
+	Try to place a queen on a certain column, if we find a position to place a queen, we move to next column;
+	
+	Backtracking: if this path(all decision we made) cannot lead us to a correct solution, we go back and try  different path;
+
+Pseudo code:
+1: Create a 2D N-by-N board we can play with. i.e. a 2D array
+2: Recursion: place a Queen on current column
+Base case:
+	if we finish placing a Queen on the last column and thus make a call to the N+1 column,
+		we push the board into our final solution set;
+Recursive case:
+	For each row in certain column
+		If it's safe to place a queen on (row, column)
+			Making decision: place a queen on position (row, column) of board
+			Explore: go to next column
+			Backtracking: retrive the queen we placed on (row, column)
+	End For
+	
+	
+	
+[
+ [".Q..",  // Solution 1
+  "...Q",
+  "Q...",
+  "..Q."],
+
+ ["..Q.",  // Solution 2
+  "Q...",
+  "...Q",
+  ".Q.."]
+]

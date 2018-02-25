@@ -1,0 +1,27 @@
+20. Valid Parentheses
+Tag: String, Stack
+Input: string that contains just the characters: '(', ')', '{', '}', '[' and ']'
+Output: if the string is valid
+
+Basic idea:
+Traverse the string char-by-char //O(N)
+	Each time we encounters a char that is an opening bracket: '(', or '{', or '['
+		we push it into stack;
+		move to the next char;
+	Each time we encounters a char is closing bracket: ')', or '}', or ']'
+		first check if stack is empty(), return false;
+		check if the poped element from stack is the correct counterpart;
+					if it is corret
+						move to the next char;
+					else
+						return false;
+end of Traverse
+return if stack is empty;
+
+Temporal Complexity: O(N);
+All the space cost is taken by stack;
+Spatial Complexity: O(N) at the worst case;
+The worst case is a string that consist only opening bracket such that you are constantly pushing chars into stack.
+
+
+				
