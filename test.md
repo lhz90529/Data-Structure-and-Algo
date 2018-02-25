@@ -4,7 +4,7 @@ Array, HashTable.
 #### Input: 
 int target, an array
 #### Output: 
-Return the _index_ of two numbers that can be added up to target;
+Return the **_index_** of two numbers that can be added up to target;
 #### Constrain: 
 Each number can be used __ONLY once__
 #### Basic idea:
