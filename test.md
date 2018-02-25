@@ -1,6 +1,6 @@
 ## [Problem Name](https:link/to/the/problem)
-##### Tags: 
-> Array, HashTable  
+##### Tags
+:	Array, HashTable  
 ##### __Input__: 
 	int target, an array
 ##### __Output__: fv
