@@ -27,4 +27,6 @@ Each number can be used __ONLY once__
 		and If x and v are not the same number; i.e. they don't share same location;
             		return index of x and index of v;
         End For
-       
+#### Amortized analysis:
+* Temporal: O(N)
+* Spatial: O(N)
