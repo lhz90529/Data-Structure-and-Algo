@@ -15,8 +15,8 @@ Each number can be used __ONLY once__
 2. Fill up the Hash Table:
 
 		For each number x from input array ---> Temporal cost: O(N)
-      		table[x] = index of x; ---> Hash Table insertion: O(1)
-        End For
+		table[x] = index of x; ---> Hash Table insertion: O(1)
+		End For
 **such that later:**
 
 	1. We can find if a value is existed in our table
