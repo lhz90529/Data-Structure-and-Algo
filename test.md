@@ -17,9 +17,9 @@ Each number can be used __ONLY once__
 		For each number x from input array ---> Temporal cost: O(N)
 			table[x] = index of x; ---> Hash Table insertion: O(1)
 		End For
-**such that later:**
-1. We can find if a value is existed in our table
-2. If it's existed, we can find where it is
+	**such that later:**
+	1. We can find if a value is existed in our table
+	2. If it's existed, we can find where it is
 3. Search:
 		
         For each number x from input array
