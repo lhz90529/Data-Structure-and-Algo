@@ -15,7 +15,7 @@ Each number can be used __ONLY once__
 2. Fill up the Hash Table:
 
 		For each number x from input array ---> Temporal cost: O(N)
-		table[x] = index of x; ---> Hash Table insertion: O(1)
+			table[x] = index of x; ---> Hash Table insertion: O(1)
 		End For
 **such that later:**
 
@@ -24,8 +24,7 @@ Each number can be used __ONLY once__
 3. Search:
 		
         For each number x from input array
-		If we can find the counterpart 'v' = target - x from table ---> Hash Table Search: O(1)
-            	And If x and v are not the same number; i.e. they don't share same location;
+		If we can find the counterpart 'v' = target - x from table ---> Hash Table Search: O(1) and If x and v are not the same number; i.e. they don't share same location;
             	return index of x and index of v;
         End For
        
