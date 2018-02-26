@@ -24,8 +24,9 @@ Each number can be used __ONLY once__
 3. Search:
 		
         For each number x from input array
-        	If we can find the counterpart 'v' = target - x from table ---> Hash Table Search: O(1)
-            And if x and v are not the same number; i.e. they don't share same location;
-            return index of x and index of v;
+		If we can find the counterpart 'v' = target - x from table ---> Hash Table Search: O(1)
+            	And 
+		If x and v are not the same number; i.e. they don't share same location;
+            		return index of x and index of v;
         End For
        
