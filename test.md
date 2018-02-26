@@ -19,14 +19,13 @@ Each number can be used __ONLY once__
         End For
 **such that later:**
 
-		1. We can find if a value is existed in our table
-		2. If it's existed, we can find where it is
+	1. We can find if a value is existed in our table
+	2. If it's existed, we can find where it is
 3. Search:
 		
         For each number x from input array
 		If we can find the counterpart 'v' = target - x from table ---> Hash Table Search: O(1)
-            	And 
-		If x and v are not the same number; i.e. they don't share same location;
-            		return index of x and index of v;
+            	And If x and v are not the same number; i.e. they don't share same location;
+            	return index of x and index of v;
         End For
        
