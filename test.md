@@ -28,5 +28,5 @@ Each number can be used __ONLY once__
             		return index of x and index of v;
         End For
 #### Amortized analysis:
-* Temporal: O(N)
-* Spatial: O(N)
+* Temporal: **O(N)**
+* Spatial: **O(N)**
