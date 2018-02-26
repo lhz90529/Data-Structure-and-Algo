@@ -1,4 +1,4 @@
-## [Problem Name](https:link/to/the/problem)
+## [1. Two Sum](https://leetcode.com/problems/two-sum/)
 ### Tags
 Array, **HashTable**.  
 #### Input: 
