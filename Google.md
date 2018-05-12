@@ -130,7 +130,7 @@
     //goal: sort v which is an unsorted list
     Driver(vector<int> v) {
         const int n = v.size();
-        Divide (0, n - 1, v, ret);
+        QuickSort(0, n - 1, v);
         //the input v is sorted from this point
     }
     ```
